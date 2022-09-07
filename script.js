@@ -13,7 +13,7 @@ const randomDice = () => {
         randomDice();
     }
 }
-const rollDice = (random random_) => {
+const rollDice = (random, random_) => {
     dice.style.animation = 'rolling 4s';
     dice_.style.animation = 'rolling 4s';
 
@@ -64,7 +64,7 @@ const rollDice = (random random_) => {
         }
         dice.style.animation = 'none';
         dice_.style.animation = 'none';
-    }, 7050);
+    }, 4050);
 }
 
 rollBtn.addEventListener('click',randomDice);

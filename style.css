@@ -18,7 +18,7 @@ body{
 .container{
     display: flex;
     place-items: center;
-    position: relative;
+    /* position: relative; */
     width: 700px;
     height: 300px;
     padding: 60px 0 40px;
@@ -30,16 +30,17 @@ body{
 .container div{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 8rem;
-    margin-left: 35px;
+    left: 25%;
+    bottom: 10px;
+    gap: 14rem;
+
 }
 
 
 /* Dice styles */
 
 .dice {
-    position: relavtive;
+    position: relative;
     width: 100px;
     height: 100px;
     transform-style: preserve-3d;
@@ -54,7 +55,7 @@ body{
 }
 
 .dice_ {
-    position: relavtive;
+    position: relative;
     width: 100px;
     height: 100px;
     transform-style: preserve-3d;
@@ -157,13 +158,15 @@ body{
     cursor: pointer;
     color: #5a0e1d;
     position: absolute;
-    margin-top: 60px;
-    padding: 12px 12px;
+    /* width: 100%; */
+    left: 40%;
+    top: 240px;
+    margin: auto;
+    padding: 12px 20px;
     border-radius: 3px;
     font: 700 16px 'Montserrat';
     border: 2px solid #b33951;
-    left: 80%;
-    top: 45%;
+
     font-size: 1.3rem;
 }
 .roll:hover{
