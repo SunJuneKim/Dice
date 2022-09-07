@@ -12,24 +12,35 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #b33951;
+    background: #44462d;
 }
 
 .container{
-    display: grid;
+    display: flex;
     place-items: center;
-    width: 250px;
+    /* position: relative; */
+    width: 700px;
+    height: 300px;
     padding: 60px 0 40px;
     border-radius: 30px;
     background: #eeeeee;
     box-shadow: 0 0 20px rgba(0,0,0,1);
+    
+}
+.container div{
+    display: flex;
+    align-items: center;
+    left: 25%;
+    bottom: 10px;
+    gap: 14rem;
+
 }
 
 
 /* Dice styles */
 
 .dice {
-    position: relavtive;
+    position: relative;
     width: 100px;
     height: 100px;
     transform-style: preserve-3d;
@@ -38,6 +49,21 @@ body{
 }
 
 @keyframes rolling{
+    50%{
+        transform: rotateX(455deg) rotateY(455deg);
+    }
+}
+
+.dice_ {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transform: rotateX(45deg) rotateY(45deg);
+    transition: 1s ease;
+}
+
+@keyframes rolling_{
     50%{
         transform: rotateX(455deg) rotateY(455deg);
     }
@@ -94,9 +120,9 @@ body{
 }
 
 /* it was a bit confusing ...*/
-.dice{
+/* .dice{
     transform: rotateX(0deg) rotateY(0deg);
-}
+} */
 
 .front::after{
     width: 30px;
@@ -130,12 +156,18 @@ body{
 
 .roll{
     cursor: pointer;
-    color: #b33951;
-    margin-top: 60px;
-    padding: 6px 12px;
+    color: #5a0e1d;
+    position: absolute;
+    /* width: 100%; */
+    left: 40%;
+    top: 240px;
+    margin: auto;
+    padding: 12px 20px;
     border-radius: 3px;
     font: 700 16px 'Montserrat';
     border: 2px solid #b33951;
+
+    font-size: 1.3rem;
 }
 .roll:hover{
     color: #fff;
