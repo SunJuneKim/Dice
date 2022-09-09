@@ -13,7 +13,7 @@ const randomDice = () => {
         randomDice();
     }
 }
-const rollDice = (random random_) => {
+const rollDice = (random,random_) => {
     dice.style.animation = 'rolling 4s';
     dice_.style.animation = 'rolling 4s';
 
