@@ -1,7 +1,7 @@
 const dice = document.querySelector('.dice');
-const rollBtn = document.querySelector('.roll');
 const dice_ = document.querySelector('.dice_');
-const upbtn = document.querySelector('up');
+const rollBtn = document.querySelector('.roll');
+const upbtn = document.querySelector('.up');
 
 const randomDice = () => {
     const random = Math.floor(Math.random() * 10);
@@ -66,7 +66,7 @@ const rollDice = (random,random_) => {
         dice.style.animation = 'none';
         dice_.style.animation = 'none';
     }, 4050);
-   
+
 }
 
 rollBtn.addEventListener('click',randomDice);
