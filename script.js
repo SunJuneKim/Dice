@@ -1,25 +1,19 @@
 const dice = document.querySelector('.dice');
 const dice_ = document.querySelector('.dice_');
 const rollBtn = document.querySelector('.roll');
-const upbtn = document.querySelector('.up');
 
 const randomDice = () => {
-    const random = Math.floor(Math.random() * 10);
-    const random_ = Math.floor(Math.random()*10);
-
-    if (random >= 1 && random <= 6 && random_ >=1 && random_ <=6) {
-        rollDice(random,random_);
-    }
-    else {
-        randomDice();
-    }
+    const random_dice1 = Math.floor(Math.random() * 6)+1;
+    const random_dice2 = Math.floor(Math.random() * 6)+1;
+    rollDice(random_dice1,random_dice2);
 }
-const rollDice = (random,random_) => {
-    dice.style.animation = 'rolling 4s';
+
+const rollDice = (random_dice1, random_dice2) => {
+    dice.style.animation = 'rolling_ 4s'; 
     dice_.style.animation = 'rolling 4s';
 
     setTimeout(() => {
-        switch (random) {
+        switch (random_dice1) {
             case 1:
                 dice.style.transform = 'rotateX(0deg) rotateY(0deg)';
                 break;
@@ -41,7 +35,7 @@ const rollDice = (random,random_) => {
             default:
                 break;
         }
-        switch (random_) {
+        switch (random_dice2) {
             case 1:
                 dice_.style.transform = 'rotateX(0deg) rotateY(0deg)';
                 break;
@@ -66,8 +60,18 @@ const rollDice = (random,random_) => {
         dice.style.animation = 'none';
         dice_.style.animation = 'none';
     }, 4050);
-
+}
+function buttonChange() {
+    text === 'GAME START' ? button.classList.remove('loading') : button.classList.add('loading');
 }
 
-rollBtn.addEventListener('click',randomDice);
-upbtn.addEventListener('click',randomDice);
+// 주사위를 돌리기전에 Up or Down 버튼 선택
+document.getElementById('.up').onclick = readyGame();
+document.getElementById('.down').onclick = readyGame();
+
+function readyGame(e){
+    alert(e.id);
+}
+
+rollBtn.addEventListener('click', randomDice);
+

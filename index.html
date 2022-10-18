@@ -10,12 +10,9 @@
     <title>DICE GAME</title>
 </head>
 <body>
-    <div class="updown">
-        <button onClick="reply_click(this.id)" class="up">up</button>
-        <button onClick="reply_click(this.id)" class="down">down</button>
-    </div>
-<div class="container">
    
+<div class="container">
+    <h1 id="title">DICE GAME</h1>
     <div>
         <div class="dice">
             <div class="face front"></div>
@@ -35,12 +32,15 @@
         </div>
         
     </div>
-    <button class="roll">
-        Roll Dice
+    <button class="roll" name="Roll Dice">
+       <h1> GAME START</h1>
     </button>
-    <div>
-      
-    </div>
+    
+</div>
+
+<div class="updown">
+    <button  class="up" id="up">up</button>
+    <button  class="down" id="down">down</button>
 </div>
     <!-- JS FILE -->
     <script src="script.js" type="text/javascript"></script>
